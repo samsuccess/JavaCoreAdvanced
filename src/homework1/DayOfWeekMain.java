@@ -16,5 +16,6 @@ public class DayOfWeekMain {
         }
         return sumHour;
 
+
     }
 }
