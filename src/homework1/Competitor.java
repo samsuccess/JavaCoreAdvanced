@@ -2,6 +2,7 @@ package homework1;
 
 public interface Competitor {
 
-    public void jump();
-    public void run();
+    public void jump(int height);
+    public void run(int dist);
+    boolean isOnDistance();
 }

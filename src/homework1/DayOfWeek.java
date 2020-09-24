@@ -1,13 +1,13 @@
 package homework1;
 
 public enum DayOfWeek {
-    MONDAY("8"),
-    TUESDAY("8"),
-    WEDNESDAY("8"),
-    THURSDAY("8"),
+    MONDAY("40"),
+    TUESDAY("32"),
+    WEDNESDAY("24"),
+    THURSDAY("16"),
     FRIDAY("8"),
     SATURDAY("today is a day off"),
-    SUNDAY("today is a day off8");
+    SUNDAY("today is a day off");
 
     private String hours;
 

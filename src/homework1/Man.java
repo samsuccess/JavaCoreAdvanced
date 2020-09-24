@@ -4,29 +4,39 @@ public class Man implements Competitor {
 
     private int maxJump;
     private int maxTrack;
+    private boolean onDistance;
 
     public Man(int maxJump, int maxTrack) {
         this.maxJump = maxJump;
         this.maxTrack = maxTrack;
-    }
-
-    public int getMaxJump() {
-        return maxJump;
-    }
-
-    public int getMaxTrack() {
-        return maxTrack;
+        this.onDistance = true;
     }
 
     @Override
-    public void jump() {
-        System.out.println("Man is jumping");
+    public void jump(int height) {
+        if (height <= maxJump) {
+            System.out.println("Man is jumping " + height + " meter");
+        } else {
+            System.out.println("Man is not jumping " + height + " meter");
+            onDistance = false;
+        }
+
     }
 
     @Override
-    public void run() {
+    public void run(int dist) {
+        if (dist <= maxTrack) {
+            System.out.println("Man is running " + dist + " meter");
+        } else {
+            System.out.println("Man is not running " + dist + " meter");
+            onDistance = false;
+        }
 
-        System.out.println("Man is running...");
+    }
+
+    @Override
+    public boolean isOnDistance() {
+        return onDistance;
     }
 
 }

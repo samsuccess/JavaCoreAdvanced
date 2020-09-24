@@ -1,11 +1,7 @@
 package homework1;
 
-public class Obstacles {
+public interface Obstacles {
 
-    public void runInTrack(Competitor c) {
-        c.run();
-    }
-    public void jumpInWall(Competitor c) {
-        c.jump();
-    }
+    public void doIt(Competitor c);
+
 }
