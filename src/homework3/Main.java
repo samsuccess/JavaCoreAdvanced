@@ -1,5 +1,7 @@
 package homework3;
 
+import kotlin.reflect.jvm.internal.impl.resolve.constants.ArrayValue;
+
 import java.util.*;
 
 public class Main {
@@ -11,12 +13,18 @@ public class Main {
                 "брат", "племянник", "дядя", "тётя"
         };
 
+        System.out.println(Arrays.toString(arr));
+
         Map<String, Integer> list = new HashMap<>();
-        for (int i = 0; i < arr.length; i++) {
-            String val = arr[i];
-            Integer count = list.getOrDefault(val, 0);
-            list.put(val, count + 1);
+        for (String x: arr) {
+            list.put(x, list.getOrDefault(x, 0) + 1);
         }
+        
+//        for (int i = 0; i < arr.length; i++) {
+//            String val = arr[i];
+//            Integer count = list.getOrDefault(val, 0);
+//            list.put(val, count + 1);
+//        }
         System.out.println(list);
 
 //        ArrayList<PhoneBook> phoneBooks = new ArrayList<>();
@@ -29,10 +37,11 @@ public class Main {
 
 
 
-        Map<String, String> phoneBook = new HashMap<>();
-        phoneBook.put("Иванов", "784556");
-        phoneBook.put("Петров", "712564");
-        phoneBook.put("Сидоров", "821546");
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Иванов", "784556");
+        phoneBook.add("Петров", "712564");
+        phoneBook.add("Сидоров", "821546");
+        phoneBook.add("Иванов", "4579812");
         System.out.println(phoneBook.get("Иванов"));
     }
 }
