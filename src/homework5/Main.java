@@ -22,7 +22,7 @@ public class Main {
 
         long start = System.currentTimeMillis();
 
-        reWriter.reWrite(array);
+        reWriter.reWrite(array, 0);
 
         long stop = System.currentTimeMillis();
         System.out.println(arr[8999999]);
@@ -42,10 +42,10 @@ public class Main {
         System.arraycopy(array, h, arr2, 0, h);
 
         Thread t1 = new Thread(() -> {
-            reWriter.reWrite(arr1);
+            reWriter.reWrite(arr1,0);
         });
         Thread t2 = new Thread(() -> {
-            reWriter.reWrite(arr2);
+            reWriter.reWrite(arr2, h);
         });
 
         t1.start();
