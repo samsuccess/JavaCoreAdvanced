@@ -43,7 +43,7 @@ public class Server {
 
             try {
                 while (true) {
-//                    System.out.println("Server: ");
+//                    System.out.println("\nServer: ");
                     out.writeUTF(scanner.nextLine());
                 }
             } catch (IOException e) {

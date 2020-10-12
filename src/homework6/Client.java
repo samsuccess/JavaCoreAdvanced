@@ -44,8 +44,9 @@ public class Client {
 
             try {
                 while (true){
-//                    System.out.println("Client: ");
+//                    System.out.println("\nClient: ");
                     out.writeUTF(scanner.nextLine());
+
                 }
             } catch (IOException e) {
                 e.printStackTrace();
